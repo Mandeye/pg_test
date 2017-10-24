@@ -4,6 +4,9 @@ project(pointgrey)
 
 set(CMAKE_CXX_FLAGS "-std=c++11 -O2 -Wall ${CMAKE_CXX_FLAGS}")
 find_package(OpenCV REQUIRED)
+find_package(OpenGL REQUIRED)
+find_package(GLUT REQUIRED)
+include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} )
 
 ###########
 ## Build ##
@@ -42,6 +45,7 @@ endif()
 include_directories(
 	/usr/include/ladybug
 	nodes/ladybug
+	ladybugStitchFrom3DMesh
 	${OpenCV_INCLUDE_DIRS}
 )
 
@@ -49,13 +53,46 @@ add_executable(lady_bug_16bit
 	ladybug_16bitTest.cpp
 )
 
+add_executable(lady_bug_8bit
+	ladybug_8bitTest.cpp
+)
+
+add_executable(ladybugStitchFrom3DMesh
+ ladybugStitchFrom3DMesh/ladybugStitchFrom3DMesh.cpp
+ ladybugStitchFrom3DMesh/pgrpnmio.cpp
+)
+add_executable(ladybugStitchFrom3DMeshCamera
+ ladybugStitchFrom3DMeshCamera.cpp
+ ladybugStitchFrom3DMesh/pgrpnmio.cpp
+)
 
 
 target_link_libraries(lady_bug_16bit
-   ${catkin_LIBRARIES} ${OpenCV_LIBS}
+   ${OpenCV_LIBS}
    flycapture
    ladybug
    xerces-c
+)
+target_link_libraries(lady_bug_8bit
+   ${OpenCV_LIBS}
+   flycapture
+   ladybug
+   xerces-c
+)
+
+target_link_libraries(ladybugStitchFrom3DMesh 
+    ${OpenCV_LIBS} 
+    ${OPENGL_LIBRARIES} 
+    ${GLUT_LIBRARY}
+)
+
+target_link_libraries(ladybugStitchFrom3DMeshCamera 
+    ${OpenCV_LIBS} 
+    ${OPENGL_LIBRARIES} 
+    ${GLUT_LIBRARY}
+    flycapture
+    ladybug
+    xerces-c
 )
 
 
