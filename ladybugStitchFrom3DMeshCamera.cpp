@@ -72,11 +72,15 @@ int gMouseState = GLUT_UP;
 int gMouseX, gMouseY;
 char *gAlphamaskFilePrefix;
 char *gImageFilePrefix;
+
+const int textureW = 1024;
+const int textureH = 1024;
+
 unsigned char *ppm_buffer; // store RGB image
 unsigned char *pgm_buffer; // store monochrome alpha mask image
 int width, height;
 unsigned char *texture_buffer;
-
+std::vector<cv::Mat> blendMasks;
 //
 // helper functions
 //
@@ -132,102 +136,11 @@ bool read_3d_mesh(char *mesh_file_path) {
 	return true;
 }
 
-// caller has to free *buffer
-bool readPPM(const char *filename, int *width, int *height,
-		unsigned char **buffer) {
-	int nrows;
-	int ncols;
-
-	unsigned char* data;
-	char szComment[200];
-	double dTimestamp = 0;
-
-	if (!ppm8ReadPacked(filename, szComment, &nrows, &ncols, &data)) {
-		return false;
-	}
-
-	*width = ncols;
-	*height = nrows;
-	*buffer = data;
-
-	return true;
-}
 
 void initialize(void) {
 
 	glGenTextures(6, gTextures);
 	outputGlError("initialize glGenTextures");
-//
-//	gAlphamaskAvailable = true;
-//	for (int cam = 0; cam < 6; cam++) {
-//		char ppmPath[100], pgmPath[100];
-//		sprintf(ppmPath, "%s%d.ppm", gImageFilePrefix, cam);
-//		sprintf(pgmPath, "%s%d.pgm", gAlphamaskFilePrefix, cam);
-//
-//
-//
-//		//
-//		// read alpha mask and set it to the 4th (U) byte of the BGRU buffer while scaling
-//		//
-//		pgm_buffer = NULL;
-//		int pgm_width, pgm_height;
-//		bool result = pgm8Read(pgmPath, NULL, &pgm_height, &pgm_width, &pgm_buffer);
-//		if (!result) {
-//			printf(
-//					"Failed to load alpha mask file (%s). Alpha blending is not available.\n",
-//					pgmPath);
-//			gAlphamaskAvailable = false;
-//		}
-//
-//		if (gAlphamaskAvailable) {
-//			for (int y = 0; y < height; y++) {
-//				for (int x = 0; x < width; x++) {
-//					int pgm_x = x * pgm_width / width;
-//					int pgm_y = y * pgm_height / height;
-//					ppm_buffer[(y * width + x) * 4 + 3] = pgm_buffer[pgm_y
-//							* pgm_width + pgm_x];
-//				}
-//			}
-//		}
-//
-//		glBindTexture( GL_TEXTURE_2D, gTextures[cam]);
-//
-//		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-//		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-//		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-//		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-//
-//		// Make a texture from the PPM image.
-//		// Texture size is set to the minimum of power of two which can contain the PPM
-//		// so that this program works on lower OpenGL versions.
-//		int texture_width = get_minimum_power_of_two(width);
-//		int texture_height = get_minimum_power_of_two(height);
-//		gValidTextureWidth = (double) width / texture_width;
-//		gValidTextureHeight = (double) height / texture_height;
-//
-//		// copy PPM image pixels to the valid region of the texture.
-//		texture_buffer = new unsigned char[texture_width
-//				* texture_height * 4];
-//		for (int y = 0; y < height; y++) {
-//			for (int x = 0; x < width; x++) {
-//				texture_buffer[(y * texture_width + x) * 4 + 0] = ppm_buffer[(y
-//						* width + x) * 4 + 0]; // B
-//				texture_buffer[(y * texture_width + x) * 4 + 1] = ppm_buffer[(y
-//						* width + x) * 4 + 1]; // G
-//				texture_buffer[(y * texture_width + x) * 4 + 2] = ppm_buffer[(y
-//						* width + x) * 4 + 2]; // R
-//				texture_buffer[(y * texture_width + x) * 4 + 3] = ppm_buffer[(y
-//						* width + x) * 4 + 3]; // A
-//			}
-//		}
-//
-//		// transfer the RGB buffer to graphics card.
-//		glTexImage2D(
-//		GL_TEXTURE_2D, 0,
-//		GL_RGBA8, texture_width, texture_height, 0,
-//		GL_BGRA_EXT,
-//		GL_UNSIGNED_BYTE, texture_buffer);
-//		outputGlError("initialize glTexImage2d()");
 
 
 
@@ -238,10 +151,10 @@ void initialize(void) {
 		glEnable( GL_TEXTURE_2D);
 		glShadeModel( GL_FLAT);
 
-		if (gAlphamaskAvailable) {
+		//if (gAlphamaskAvailable) {
 			glEnable( GL_BLEND);
 			glBlendFunc( GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-		}
+		//}
 #endif
 //	}
 }
@@ -366,97 +279,35 @@ void idle(void) {
 		cv::Mat imageCropped = imageDebayered(cv::Range(border.uiTopRows, size.height-border.uiBottomRows), cv::Range(border.uiLeftCols, size.width-border.uiRightCols));
 
 		cv::Mat imageGL;
-		cv::resize(imageCropped, imageGL ,cv::Size(1024,1024));
+		cv::resize(imageCropped, imageGL ,cv::Size(textureW,textureH));
+
+		cv::Mat imageGLAlpha(imageGL.size(), CV_8UC4);
+
+		int from_to[] = { 0,0, 1,1, 2,2, -1,3 };
+		cv::mixChannels(&imageGL,1,&imageGLAlpha,1,from_to,4);
+
+		cv::Mat imageGLAlpha2;
+		cv::add(blendMasks[uiCamera],imageGLAlpha,imageGLAlpha2);
+
+
 		gValidTextureWidth  = 1.0;
 		gValidTextureHeight = 1.0;
+		cv::imwrite("/tmp/dupa1.png",imageGLAlpha2);
 
 		glTexImage2D(
 		GL_TEXTURE_2D, 0,
-		GL_RGB8, 1024, 1024, 0,
-		GL_BGR_EXT,
-		GL_UNSIGNED_BYTE, imageGL.ptr());
+		GL_RGBA8, textureW, textureH, 0,
+		GL_BGRA_EXT,
+		GL_UNSIGNED_BYTE, imageGLAlpha2.ptr());
 		outputGlError("initialize glTexImage2d()");
 
 
     }
 
 
-//	for (int uiCamera=0; uiCamera <6; uiCamera++)
-//	{
-//
-//
-//		cv::Size size(currentImage.uiFullCols, currentImage.uiFullRows);
-//		cv::Mat rawImage(size, CV_8UC1, currentImage.pData + (uiCamera * size.width*size.height));
-//		cv::Mat image(size, CV_8UC3);
-//
-//
-////		int texture_width = get_minimum_power_of_two(size.width);
-////		int texture_height = get_minimum_power_of_two(size.height);
-////		cv::resize(image,imageGL, cv::Size(texture_width,texture_height));
-//
-//		cv::imshow("aa",image);
-//		cv::waitKey(0);
-//		//gValidTextureWidth  = (double) width / texture_width;
-//		//gValidTextureHeight = (double) height / texture_height;
-//
-////		glBindTexture( GL_TEXTURE_2D, gTextures[uiCamera]);
-////		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-////		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-////		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-////		glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-////
-////		// Make a texture from the PPM image.
-////		// Texture size is set to the minimum of power of two which can contain the PPM
-////		// so that this program works on lower OpenGL versions.
-////
-////
-//////		// copy PPM image pixels to the valid region of the texture.
-//////		texture_buffer = new unsigned char[texture_width
-//////				* texture_height * 4];
-//////		for (int y = 0; y < height; y++) {
-//////			for (int x = 0; x < width; x++) {
-//////				texture_buffer[(y * texture_width + x) * 4 + 0] = ppm_buffer[(y
-//////						* width + x) * 4 + 0]; // B
-//////				texture_buffer[(y * texture_width + x) * 4 + 1] = ppm_buffer[(y
-//////						* width + x) * 4 + 1]; // G
-//////				texture_buffer[(y * texture_width + x) * 4 + 2] = ppm_buffer[(y
-//////						* width + x) * 4 + 2]; // R
-//////				texture_buffer[(y * texture_width + x) * 4 + 3] = ppm_buffer[(y
-//////						* width + x) * 4 + 3]; // A
-//////			}
-//////		}
-////
-////		// transfer the RGB buffer to graphics card.
-////		glTexImage2D(
-////		GL_TEXTURE_2D, 0,
-////		GL_RGBA8, texture_width, texture_height, 0,
-////		GL_BGRA_EXT,
-////		GL_UNSIGNED_BYTE, imageGL.data);
-////		outputGlError("initialize glTexImage2d()");
-//	}
 
 
 
-
-//		for (unsigned int uiCamera = 0; uiCamera < LADYBUG_NUM_CAMERAS;
-//				uiCamera++) {
-//			std::ostringstream out;
-//
-//			out << "image" << uiCamera;
-//
-//			cv::Size size(currentImage.uiFullCols, currentImage.uiFullRows);
-//			cv::Mat rawImage(size, CV_8UC1,
-//					currentImage.pData + (uiCamera * size.width * size.height));
-//			cv::Mat image(size, CV_8UC3);
-//			cv::Mat image2;
-//
-//			cv::cvtColor(rawImage, image, cv::COLOR_BayerBG2BGR_EA);
-//			cv::resize(image, image2, cv::Size(0, 0), 0.3, 0.3);
-//			cv::imshow(out.str(), image2);
-//			cv::waitKey(0);
-//
-//			//cv::imwrite(out.str(), image);
-//		}
 
 	glutPostRedisplay();
 }
@@ -510,9 +361,26 @@ int main(int argc, char* argv[]) {
 	_HANDLE_ERROR;
 
 
+	// load blends
 
-	gAlphamaskFilePrefix = "TextureCam";
-	gImageFilePrefix = "cam";
+	std::string blendBaseName="TextureCam";
+	for (int i=0; i<6; i++)
+	{
+		std::stringstream oss;
+		oss << blendBaseName <<i<<".pgm";
+		cv::Mat blend = cv::imread(oss.str());
+
+		std::cout << type2str(blend.type()) <<"\n";
+		cv::Mat blendResized;
+
+		cv::resize(blend, blendResized ,cv::Size(textureW,textureH));
+		cv::Mat blendResizedAlphed( blendResized.rows, blendResized.cols, CV_8UC4 );
+		int from_to[] = { -1,0, -1,1, -1,2, 1,3 };
+		cv::mixChannels(&blendResized,1,&blendResizedAlphed,1,from_to,4);
+		blendMasks.push_back(blendResizedAlphed);
+		imwrite("a.png",blendResizedAlphed );
+	}
+
 
 	glutInit(&argc, argv);
 	glutInitWindowSize(800, 600);
