@@ -305,10 +305,6 @@ void idle(void) {
     }
 
 
-
-
-
-
 	glutPostRedisplay();
 }
 

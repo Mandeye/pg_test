@@ -56,7 +56,9 @@ add_executable(lady_bug_16bit
 add_executable(lady_bug_8bit
 	ladybug_8bitTest.cpp
 )
-
+add_executable(lady_bug_8bit_rect
+	ladybug_8bitTest_rect.cpp
+)
 add_executable(ladybugStitchFrom3DMesh
  ladybugStitchFrom3DMesh/ladybugStitchFrom3DMesh.cpp
  ladybugStitchFrom3DMesh/pgrpnmio.cpp
@@ -79,7 +81,12 @@ target_link_libraries(lady_bug_8bit
    ladybug
    xerces-c
 )
-
+target_link_libraries(lady_bug_8bit_rect
+   ${OpenCV_LIBS}
+   flycapture
+   ladybug
+   xerces-c
+)
 target_link_libraries(ladybugStitchFrom3DMesh 
     ${OpenCV_LIBS} 
     ${OPENGL_LIBRARIES} 
