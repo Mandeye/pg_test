@@ -36,6 +36,7 @@
 #include "ladybugstream.h"
 #include "ladybuggeom.h"
 #include "opencv2/opencv.hpp"
+#include <opencv2/imgproc/imgproc.hpp>
 #define _HANDLE_ERROR \
     if( error != LADYBUG_OK ) \
    { \
@@ -82,6 +83,44 @@ bool loadHashTableCamera(ladybug_hash_table_t *_hashTableImage, std::string _fil
 		f.close();
 		return true;
 	}else return false;
+}
+
+inline bool _isBlack(cv::Vec3b b)
+{
+	return b[0]== 0 &&  b[1] == 0 && b[2] == 0;
+}
+void filter (cv::Mat &input, cv::Mat &output)
+{
+	output = input;
+	for (int i = 1; i+1 < output.rows;i++)
+	{
+		for (int j = 1; j+1 < output.cols;j++)
+		{
+			cv::Vec3b intensity0 = input.at<cv::Vec3b>(i, j);
+			cv::Vec3b intensity1 = input.at<cv::Vec3b>(i-1, j);
+			cv::Vec3b intensity2 = input.at<cv::Vec3b>(i+1, j);
+			cv::Vec3b intensity3 = input.at<cv::Vec3b>(i, j-1);
+			cv::Vec3b intensity4 = input.at<cv::Vec3b>(i, j+1);
+
+
+
+			if (_isBlack(intensity0))
+			{
+				intensity0 = intensity1;
+			}
+			if (_isBlack(intensity0))
+			{
+				intensity0 = intensity2;
+			}
+			if (_isBlack(intensity0))
+			{
+				intensity0 = intensity3;
+			}
+
+
+			output.at<cv::Vec3b>(i,j) = intensity0;
+		}
+	}
 }
 
 int main( int /* argc */, char* /* argv[] */ )
@@ -180,14 +219,16 @@ int main( int /* argc */, char* /* argv[] */ )
 				cv::Vec3b intensity = imageCropped.at<cv::Vec3b>(col, row);
 				ladybug_hash_table_t ht = hashTableImage[uiCamera][row + col * 2048 ];
 
-				ImageRectified.at<cv::Vec3b>(int(ht.rCol), imageCropped.size().width - int(ht.rRow) - 1).val[0] = intensity.val[0];
-				ImageRectified.at<cv::Vec3b>(int(ht.rCol), imageCropped.size().width - int(ht.rRow) - 1).val[1] = intensity.val[1];
-				ImageRectified.at<cv::Vec3b>(int(ht.rCol), imageCropped.size().width - int(ht.rRow) - 1).val[2] = intensity.val[2];
+				ImageRectified.at<cv::Vec3b>(roundf(ht.rCol), roundf(imageCropped.size().width - int(ht.rRow) - 1)) = intensity;
+
+
 			}
 		}
-		cv::rotate(ImageRectified,ImageRectified, cv::ROTATE_90_COUNTERCLOCKWISE);
-		cv::resize(ImageRectified,ImageRectified, cv::Size(ImageRectified.size().width/2,ImageRectified.size().height/2 ));
-		cv::imwrite(out.str(), ImageRectified);
+		cv::Mat ImageRectifiedFilteredl;
+		filter(ImageRectified,ImageRectifiedFilteredl);
+		cv::rotate(ImageRectifiedFilteredl,ImageRectifiedFilteredl, cv::ROTATE_90_COUNTERCLOCKWISE);
+		//cv::resize(ImageRectified,ImageRectified, cv::Size(ImageRectified.size().width/2,ImageRectified.size().height/2 ));
+		cv::imwrite(out.str(), ImageRectifiedFilteredl);
     }
 
     // Destroy the context

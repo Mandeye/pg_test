@@ -1,12 +1,13 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(pointgrey)
 
+add_subdirectory (gtest)
 
 set(CMAKE_CXX_FLAGS "-std=c++11 -O2 -Wall ${CMAKE_CXX_FLAGS}")
 find_package(OpenCV REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
-include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} )
+include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} include )
 
 ###########
 ## Build ##
@@ -102,4 +103,9 @@ target_link_libraries(ladybugStitchFrom3DMeshCamera
     xerces-c
 )
 
-
+file(GLOB_RECURSE test_sources  test/*.cpp)
+add_executable(test_${PROJECT_NAME} ${test_sources})
+target_link_libraries(test_${PROJECT_NAME} ${GTEST_LIBRARIES} pthread gtest
+  ${Boost_LIBRARIES}
+  ${PCL_LIBRARIES}
+)

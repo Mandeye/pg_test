@@ -1,0 +1,1089 @@
+[==========] Running 512 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 512 tests from testGeometry
+[ RUN      ] testGeometry.point_0
+[       OK ] testGeometry.point_0 (0 ms)
+[ RUN      ] testGeometry.point_1
+[       OK ] testGeometry.point_1 (0 ms)
+[ RUN      ] testGeometry.point_2
+[       OK ] testGeometry.point_2 (0 ms)
+[ RUN      ] testGeometry.point_3
+[       OK ] testGeometry.point_3 (0 ms)
+[ RUN      ] testGeometry.point_4
+[       OK ] testGeometry.point_4 (0 ms)
+[ RUN      ] testGeometry.point_5
+[       OK ] testGeometry.point_5 (0 ms)
+[ RUN      ] testGeometry.point_6
+[       OK ] testGeometry.point_6 (0 ms)
+[ RUN      ] testGeometry.point_7
+[       OK ] testGeometry.point_7 (0 ms)
+[ RUN      ] testGeometry.point_8
+[       OK ] testGeometry.point_8 (0 ms)
+[ RUN      ] testGeometry.point_9
+[       OK ] testGeometry.point_9 (0 ms)
+[ RUN      ] testGeometry.point_10
+[       OK ] testGeometry.point_10 (0 ms)
+[ RUN      ] testGeometry.point_11
+[       OK ] testGeometry.point_11 (0 ms)
+[ RUN      ] testGeometry.point_12
+[       OK ] testGeometry.point_12 (0 ms)
+[ RUN      ] testGeometry.point_13
+[       OK ] testGeometry.point_13 (0 ms)
+[ RUN      ] testGeometry.point_14
+[       OK ] testGeometry.point_14 (0 ms)
+[ RUN      ] testGeometry.point_15
+[       OK ] testGeometry.point_15 (0 ms)
+[ RUN      ] testGeometry.point_16
+[       OK ] testGeometry.point_16 (0 ms)
+[ RUN      ] testGeometry.point_17
+[       OK ] testGeometry.point_17 (0 ms)
+[ RUN      ] testGeometry.point_18
+[       OK ] testGeometry.point_18 (0 ms)
+[ RUN      ] testGeometry.point_19
+[       OK ] testGeometry.point_19 (0 ms)
+[ RUN      ] testGeometry.point_20
+[       OK ] testGeometry.point_20 (0 ms)
+[ RUN      ] testGeometry.point_21
+[       OK ] testGeometry.point_21 (0 ms)
+[ RUN      ] testGeometry.point_22
+[       OK ] testGeometry.point_22 (0 ms)
+[ RUN      ] testGeometry.point_23
+[       OK ] testGeometry.point_23 (0 ms)
+[ RUN      ] testGeometry.point_24
+[       OK ] testGeometry.point_24 (0 ms)
+[ RUN      ] testGeometry.point_25
+[       OK ] testGeometry.point_25 (0 ms)
+[ RUN      ] testGeometry.point_26
+[       OK ] testGeometry.point_26 (0 ms)
+[ RUN      ] testGeometry.point_27
+[       OK ] testGeometry.point_27 (0 ms)
+[ RUN      ] testGeometry.point_28
+[       OK ] testGeometry.point_28 (0 ms)
+[ RUN      ] testGeometry.point_29
+[       OK ] testGeometry.point_29 (0 ms)
+[ RUN      ] testGeometry.point_30
+[       OK ] testGeometry.point_30 (0 ms)
+[ RUN      ] testGeometry.point_31
+[       OK ] testGeometry.point_31 (0 ms)
+[ RUN      ] testGeometry.point_32
+[       OK ] testGeometry.point_32 (0 ms)
+[ RUN      ] testGeometry.point_33
+[       OK ] testGeometry.point_33 (0 ms)
+[ RUN      ] testGeometry.point_34
+[       OK ] testGeometry.point_34 (0 ms)
+[ RUN      ] testGeometry.point_35
+[       OK ] testGeometry.point_35 (0 ms)
+[ RUN      ] testGeometry.point_36
+[       OK ] testGeometry.point_36 (0 ms)
+[ RUN      ] testGeometry.point_37
+[       OK ] testGeometry.point_37 (0 ms)
+[ RUN      ] testGeometry.point_38
+[       OK ] testGeometry.point_38 (0 ms)
+[ RUN      ] testGeometry.point_39
+[       OK ] testGeometry.point_39 (0 ms)
+[ RUN      ] testGeometry.point_40
+[       OK ] testGeometry.point_40 (0 ms)
+[ RUN      ] testGeometry.point_41
+[       OK ] testGeometry.point_41 (0 ms)
+[ RUN      ] testGeometry.point_42
+[       OK ] testGeometry.point_42 (0 ms)
+[ RUN      ] testGeometry.point_43
+[       OK ] testGeometry.point_43 (0 ms)
+[ RUN      ] testGeometry.point_44
+[       OK ] testGeometry.point_44 (0 ms)
+[ RUN      ] testGeometry.point_45
+[       OK ] testGeometry.point_45 (0 ms)
+[ RUN      ] testGeometry.point_46
+[       OK ] testGeometry.point_46 (0 ms)
+[ RUN      ] testGeometry.point_47
+[       OK ] testGeometry.point_47 (0 ms)
+[ RUN      ] testGeometry.point_48
+[       OK ] testGeometry.point_48 (0 ms)
+[ RUN      ] testGeometry.point_49
+[       OK ] testGeometry.point_49 (0 ms)
+[ RUN      ] testGeometry.point_50
+[       OK ] testGeometry.point_50 (0 ms)
+[ RUN      ] testGeometry.point_51
+[       OK ] testGeometry.point_51 (0 ms)
+[ RUN      ] testGeometry.point_52
+[       OK ] testGeometry.point_52 (0 ms)
+[ RUN      ] testGeometry.point_53
+[       OK ] testGeometry.point_53 (0 ms)
+[ RUN      ] testGeometry.point_54
+[       OK ] testGeometry.point_54 (0 ms)
+[ RUN      ] testGeometry.point_55
+[       OK ] testGeometry.point_55 (0 ms)
+[ RUN      ] testGeometry.point_56
+[       OK ] testGeometry.point_56 (0 ms)
+[ RUN      ] testGeometry.point_57
+[       OK ] testGeometry.point_57 (0 ms)
+[ RUN      ] testGeometry.point_58
+[       OK ] testGeometry.point_58 (0 ms)
+[ RUN      ] testGeometry.point_59
+[       OK ] testGeometry.point_59 (0 ms)
+[ RUN      ] testGeometry.point_60
+[       OK ] testGeometry.point_60 (0 ms)
+[ RUN      ] testGeometry.point_61
+[       OK ] testGeometry.point_61 (0 ms)
+[ RUN      ] testGeometry.point_62
+[       OK ] testGeometry.point_62 (0 ms)
+[ RUN      ] testGeometry.point_63
+[       OK ] testGeometry.point_63 (0 ms)
+[ RUN      ] testGeometry.point_64
+[       OK ] testGeometry.point_64 (0 ms)
+[ RUN      ] testGeometry.point_65
+[       OK ] testGeometry.point_65 (0 ms)
+[ RUN      ] testGeometry.point_66
+[       OK ] testGeometry.point_66 (0 ms)
+[ RUN      ] testGeometry.point_67
+[       OK ] testGeometry.point_67 (0 ms)
+[ RUN      ] testGeometry.point_68
+[       OK ] testGeometry.point_68 (0 ms)
+[ RUN      ] testGeometry.point_69
+[       OK ] testGeometry.point_69 (0 ms)
+[ RUN      ] testGeometry.point_70
+[       OK ] testGeometry.point_70 (0 ms)
+[ RUN      ] testGeometry.point_71
+[       OK ] testGeometry.point_71 (0 ms)
+[ RUN      ] testGeometry.point_72
+[       OK ] testGeometry.point_72 (0 ms)
+[ RUN      ] testGeometry.point_73
+[       OK ] testGeometry.point_73 (0 ms)
+[ RUN      ] testGeometry.point_74
+[       OK ] testGeometry.point_74 (0 ms)
+[ RUN      ] testGeometry.point_75
+[       OK ] testGeometry.point_75 (0 ms)
+[ RUN      ] testGeometry.point_76
+[       OK ] testGeometry.point_76 (0 ms)
+[ RUN      ] testGeometry.point_77
+[       OK ] testGeometry.point_77 (0 ms)
+[ RUN      ] testGeometry.point_78
+[       OK ] testGeometry.point_78 (0 ms)
+[ RUN      ] testGeometry.point_79
+[       OK ] testGeometry.point_79 (0 ms)
+[ RUN      ] testGeometry.point_80
+[       OK ] testGeometry.point_80 (0 ms)
+[ RUN      ] testGeometry.point_81
+[       OK ] testGeometry.point_81 (0 ms)
+[ RUN      ] testGeometry.point_82
+[       OK ] testGeometry.point_82 (0 ms)
+[ RUN      ] testGeometry.point_83
+[       OK ] testGeometry.point_83 (0 ms)
+[ RUN      ] testGeometry.point_84
+[       OK ] testGeometry.point_84 (0 ms)
+[ RUN      ] testGeometry.point_85
+[       OK ] testGeometry.point_85 (0 ms)
+[ RUN      ] testGeometry.point_86
+[       OK ] testGeometry.point_86 (0 ms)
+[ RUN      ] testGeometry.point_87
+[       OK ] testGeometry.point_87 (0 ms)
+[ RUN      ] testGeometry.point_88
+[       OK ] testGeometry.point_88 (0 ms)
+[ RUN      ] testGeometry.point_89
+[       OK ] testGeometry.point_89 (0 ms)
+[ RUN      ] testGeometry.point_90
+[       OK ] testGeometry.point_90 (0 ms)
+[ RUN      ] testGeometry.point_91
+/home/michal/Desktop/pg_test/test/test_camera_model.cpp:16: Failure
+The difference between u and eu is 0.10859820804034825, which exceeds 0.1, where
+u evaluates to -84448.408561457254,
+eu evaluates to -84448.517159665294, and
+0.1 evaluates to 0.10000000000000001.
+[  FAILED  ] testGeometry.point_91 (0 ms)
+[ RUN      ] testGeometry.point_92
+/home/michal/Desktop/pg_test/test/test_camera_model.cpp:16: Failure
+The difference between u and eu is 0.17368213695590384, which exceeds 0.1, where
+u evaluates to -135002.98698239285,
+eu evaluates to -135003.1606645298, and
+0.1 evaluates to 0.10000000000000001.
+[  FAILED  ] testGeometry.point_92 (0 ms)
+[ RUN      ] testGeometry.point_93
+/home/michal/Desktop/pg_test/test/test_camera_model.cpp:16: Failure
+The difference between u and eu is 0.43194686627248302, which exceeds 0.1, where
+u evaluates to -330820.50685312971,
+eu evaluates to -330820.93879999599, and
+0.1 evaluates to 0.10000000000000001.
+[  FAILED  ] testGeometry.point_93 (0 ms)
+[ RUN      ] testGeometry.point_94
+[       OK ] testGeometry.point_94 (0 ms)
+[ RUN      ] testGeometry.point_95
+[       OK ] testGeometry.point_95 (0 ms)
+[ RUN      ] testGeometry.point_96
+[       OK ] testGeometry.point_96 (0 ms)
+[ RUN      ] testGeometry.point_97
+[       OK ] testGeometry.point_97 (0 ms)
+[ RUN      ] testGeometry.point_98
+[       OK ] testGeometry.point_98 (0 ms)
+[ RUN      ] testGeometry.point_99
+[       OK ] testGeometry.point_99 (0 ms)
+[ RUN      ] testGeometry.point_100
+[       OK ] testGeometry.point_100 (0 ms)
+[ RUN      ] testGeometry.point_101
+[       OK ] testGeometry.point_101 (0 ms)
+[ RUN      ] testGeometry.point_102
+[       OK ] testGeometry.point_102 (0 ms)
+[ RUN      ] testGeometry.point_103
+[       OK ] testGeometry.point_103 (0 ms)
+[ RUN      ] testGeometry.point_104
+[       OK ] testGeometry.point_104 (0 ms)
+[ RUN      ] testGeometry.point_105
+[       OK ] testGeometry.point_105 (0 ms)
+[ RUN      ] testGeometry.point_106
+[       OK ] testGeometry.point_106 (0 ms)
+[ RUN      ] testGeometry.point_107
+[       OK ] testGeometry.point_107 (0 ms)
+[ RUN      ] testGeometry.point_108
+[       OK ] testGeometry.point_108 (0 ms)
+[ RUN      ] testGeometry.point_109
+[       OK ] testGeometry.point_109 (0 ms)
+[ RUN      ] testGeometry.point_110
+[       OK ] testGeometry.point_110 (0 ms)
+[ RUN      ] testGeometry.point_111
+[       OK ] testGeometry.point_111 (0 ms)
+[ RUN      ] testGeometry.point_112
+[       OK ] testGeometry.point_112 (0 ms)
+[ RUN      ] testGeometry.point_113
+[       OK ] testGeometry.point_113 (0 ms)
+[ RUN      ] testGeometry.point_114
+[       OK ] testGeometry.point_114 (0 ms)
+[ RUN      ] testGeometry.point_115
+[       OK ] testGeometry.point_115 (0 ms)
+[ RUN      ] testGeometry.point_116
+[       OK ] testGeometry.point_116 (0 ms)
+[ RUN      ] testGeometry.point_117
+[       OK ] testGeometry.point_117 (0 ms)
+[ RUN      ] testGeometry.point_118
+[       OK ] testGeometry.point_118 (0 ms)
+[ RUN      ] testGeometry.point_119
+[       OK ] testGeometry.point_119 (0 ms)
+[ RUN      ] testGeometry.point_120
+[       OK ] testGeometry.point_120 (0 ms)
+[ RUN      ] testGeometry.point_121
+[       OK ] testGeometry.point_121 (0 ms)
+[ RUN      ] testGeometry.point_122
+[       OK ] testGeometry.point_122 (0 ms)
+[ RUN      ] testGeometry.point_123
+[       OK ] testGeometry.point_123 (0 ms)
+[ RUN      ] testGeometry.point_124
+[       OK ] testGeometry.point_124 (0 ms)
+[ RUN      ] testGeometry.point_125
+[       OK ] testGeometry.point_125 (0 ms)
+[ RUN      ] testGeometry.point_126
+[       OK ] testGeometry.point_126 (0 ms)
+[ RUN      ] testGeometry.point_127
+[       OK ] testGeometry.point_127 (0 ms)
+[ RUN      ] testGeometry.point_128
+[       OK ] testGeometry.point_128 (0 ms)
+[ RUN      ] testGeometry.point_129
+[       OK ] testGeometry.point_129 (0 ms)
+[ RUN      ] testGeometry.point_130
+[       OK ] testGeometry.point_130 (0 ms)
+[ RUN      ] testGeometry.point_131
+[       OK ] testGeometry.point_131 (0 ms)
+[ RUN      ] testGeometry.point_132
+[       OK ] testGeometry.point_132 (0 ms)
+[ RUN      ] testGeometry.point_133
+[       OK ] testGeometry.point_133 (0 ms)
+[ RUN      ] testGeometry.point_134
+[       OK ] testGeometry.point_134 (0 ms)
+[ RUN      ] testGeometry.point_135
+[       OK ] testGeometry.point_135 (0 ms)
+[ RUN      ] testGeometry.point_136
+[       OK ] testGeometry.point_136 (0 ms)
+[ RUN      ] testGeometry.point_137
+[       OK ] testGeometry.point_137 (0 ms)
+[ RUN      ] testGeometry.point_138
+[       OK ] testGeometry.point_138 (0 ms)
+[ RUN      ] testGeometry.point_139
+[       OK ] testGeometry.point_139 (0 ms)
+[ RUN      ] testGeometry.point_140
+[       OK ] testGeometry.point_140 (0 ms)
+[ RUN      ] testGeometry.point_141
+[       OK ] testGeometry.point_141 (0 ms)
+[ RUN      ] testGeometry.point_142
+[       OK ] testGeometry.point_142 (0 ms)
+[ RUN      ] testGeometry.point_143
+[       OK ] testGeometry.point_143 (0 ms)
+[ RUN      ] testGeometry.point_144
+[       OK ] testGeometry.point_144 (0 ms)
+[ RUN      ] testGeometry.point_145
+[       OK ] testGeometry.point_145 (0 ms)
+[ RUN      ] testGeometry.point_146
+[       OK ] testGeometry.point_146 (0 ms)
+[ RUN      ] testGeometry.point_147
+[       OK ] testGeometry.point_147 (0 ms)
+[ RUN      ] testGeometry.point_148
+[       OK ] testGeometry.point_148 (0 ms)
+[ RUN      ] testGeometry.point_149
+[       OK ] testGeometry.point_149 (0 ms)
+[ RUN      ] testGeometry.point_150
+[       OK ] testGeometry.point_150 (0 ms)
+[ RUN      ] testGeometry.point_151
+[       OK ] testGeometry.point_151 (0 ms)
+[ RUN      ] testGeometry.point_152
+[       OK ] testGeometry.point_152 (0 ms)
+[ RUN      ] testGeometry.point_153
+[       OK ] testGeometry.point_153 (0 ms)
+[ RUN      ] testGeometry.point_154
+[       OK ] testGeometry.point_154 (0 ms)
+[ RUN      ] testGeometry.point_155
+[       OK ] testGeometry.point_155 (0 ms)
+[ RUN      ] testGeometry.point_156
+[       OK ] testGeometry.point_156 (0 ms)
+[ RUN      ] testGeometry.point_157
+[       OK ] testGeometry.point_157 (0 ms)
+[ RUN      ] testGeometry.point_158
+[       OK ] testGeometry.point_158 (0 ms)
+[ RUN      ] testGeometry.point_159
+[       OK ] testGeometry.point_159 (0 ms)
+[ RUN      ] testGeometry.point_160
+[       OK ] testGeometry.point_160 (0 ms)
+[ RUN      ] testGeometry.point_161
+[       OK ] testGeometry.point_161 (0 ms)
+[ RUN      ] testGeometry.point_162
+[       OK ] testGeometry.point_162 (0 ms)
+[ RUN      ] testGeometry.point_163
+[       OK ] testGeometry.point_163 (0 ms)
+[ RUN      ] testGeometry.point_164
+[       OK ] testGeometry.point_164 (0 ms)
+[ RUN      ] testGeometry.point_165
+[       OK ] testGeometry.point_165 (0 ms)
+[ RUN      ] testGeometry.point_166
+[       OK ] testGeometry.point_166 (0 ms)
+[ RUN      ] testGeometry.point_167
+[       OK ] testGeometry.point_167 (0 ms)
+[ RUN      ] testGeometry.point_168
+[       OK ] testGeometry.point_168 (0 ms)
+[ RUN      ] testGeometry.point_169
+[       OK ] testGeometry.point_169 (0 ms)
+[ RUN      ] testGeometry.point_170
+[       OK ] testGeometry.point_170 (0 ms)
+[ RUN      ] testGeometry.point_171
+[       OK ] testGeometry.point_171 (0 ms)
+[ RUN      ] testGeometry.point_172
+[       OK ] testGeometry.point_172 (0 ms)
+[ RUN      ] testGeometry.point_173
+[       OK ] testGeometry.point_173 (0 ms)
+[ RUN      ] testGeometry.point_174
+[       OK ] testGeometry.point_174 (0 ms)
+[ RUN      ] testGeometry.point_175
+[       OK ] testGeometry.point_175 (0 ms)
+[ RUN      ] testGeometry.point_176
+[       OK ] testGeometry.point_176 (0 ms)
+[ RUN      ] testGeometry.point_177
+[       OK ] testGeometry.point_177 (0 ms)
+[ RUN      ] testGeometry.point_178
+[       OK ] testGeometry.point_178 (0 ms)
+[ RUN      ] testGeometry.point_179
+[       OK ] testGeometry.point_179 (0 ms)
+[ RUN      ] testGeometry.point_180
+[       OK ] testGeometry.point_180 (0 ms)
+[ RUN      ] testGeometry.point_181
+[       OK ] testGeometry.point_181 (0 ms)
+[ RUN      ] testGeometry.point_182
+[       OK ] testGeometry.point_182 (0 ms)
+[ RUN      ] testGeometry.point_183
+[       OK ] testGeometry.point_183 (0 ms)
+[ RUN      ] testGeometry.point_184
+[       OK ] testGeometry.point_184 (0 ms)
+[ RUN      ] testGeometry.point_185
+[       OK ] testGeometry.point_185 (0 ms)
+[ RUN      ] testGeometry.point_186
+[       OK ] testGeometry.point_186 (0 ms)
+[ RUN      ] testGeometry.point_187
+[       OK ] testGeometry.point_187 (0 ms)
+[ RUN      ] testGeometry.point_188
+[       OK ] testGeometry.point_188 (0 ms)
+[ RUN      ] testGeometry.point_189
+[       OK ] testGeometry.point_189 (0 ms)
+[ RUN      ] testGeometry.point_190
+[       OK ] testGeometry.point_190 (0 ms)
+[ RUN      ] testGeometry.point_191
+[       OK ] testGeometry.point_191 (0 ms)
+[ RUN      ] testGeometry.point_192
+[       OK ] testGeometry.point_192 (0 ms)
+[ RUN      ] testGeometry.point_193
+[       OK ] testGeometry.point_193 (0 ms)
+[ RUN      ] testGeometry.point_194
+[       OK ] testGeometry.point_194 (0 ms)
+[ RUN      ] testGeometry.point_195
+[       OK ] testGeometry.point_195 (0 ms)
+[ RUN      ] testGeometry.point_196
+[       OK ] testGeometry.point_196 (0 ms)
+[ RUN      ] testGeometry.point_197
+[       OK ] testGeometry.point_197 (0 ms)
+[ RUN      ] testGeometry.point_198
+[       OK ] testGeometry.point_198 (0 ms)
+[ RUN      ] testGeometry.point_199
+[       OK ] testGeometry.point_199 (0 ms)
+[ RUN      ] testGeometry.point_200
+[       OK ] testGeometry.point_200 (0 ms)
+[ RUN      ] testGeometry.point_201
+[       OK ] testGeometry.point_201 (0 ms)
+[ RUN      ] testGeometry.point_202
+[       OK ] testGeometry.point_202 (0 ms)
+[ RUN      ] testGeometry.point_203
+[       OK ] testGeometry.point_203 (0 ms)
+[ RUN      ] testGeometry.point_204
+[       OK ] testGeometry.point_204 (0 ms)
+[ RUN      ] testGeometry.point_205
+[       OK ] testGeometry.point_205 (0 ms)
+[ RUN      ] testGeometry.point_206
+[       OK ] testGeometry.point_206 (0 ms)
+[ RUN      ] testGeometry.point_207
+[       OK ] testGeometry.point_207 (0 ms)
+[ RUN      ] testGeometry.point_208
+[       OK ] testGeometry.point_208 (0 ms)
+[ RUN      ] testGeometry.point_209
+[       OK ] testGeometry.point_209 (1 ms)
+[ RUN      ] testGeometry.point_210
+[       OK ] testGeometry.point_210 (0 ms)
+[ RUN      ] testGeometry.point_211
+[       OK ] testGeometry.point_211 (0 ms)
+[ RUN      ] testGeometry.point_212
+[       OK ] testGeometry.point_212 (0 ms)
+[ RUN      ] testGeometry.point_213
+[       OK ] testGeometry.point_213 (0 ms)
+[ RUN      ] testGeometry.point_214
+[       OK ] testGeometry.point_214 (0 ms)
+[ RUN      ] testGeometry.point_215
+[       OK ] testGeometry.point_215 (0 ms)
+[ RUN      ] testGeometry.point_216
+[       OK ] testGeometry.point_216 (0 ms)
+[ RUN      ] testGeometry.point_217
+[       OK ] testGeometry.point_217 (0 ms)
+[ RUN      ] testGeometry.point_218
+[       OK ] testGeometry.point_218 (0 ms)
+[ RUN      ] testGeometry.point_219
+[       OK ] testGeometry.point_219 (0 ms)
+[ RUN      ] testGeometry.point_220
+[       OK ] testGeometry.point_220 (0 ms)
+[ RUN      ] testGeometry.point_221
+[       OK ] testGeometry.point_221 (0 ms)
+[ RUN      ] testGeometry.point_222
+[       OK ] testGeometry.point_222 (0 ms)
+[ RUN      ] testGeometry.point_223
+[       OK ] testGeometry.point_223 (0 ms)
+[ RUN      ] testGeometry.point_224
+[       OK ] testGeometry.point_224 (0 ms)
+[ RUN      ] testGeometry.point_225
+[       OK ] testGeometry.point_225 (0 ms)
+[ RUN      ] testGeometry.point_226
+[       OK ] testGeometry.point_226 (0 ms)
+[ RUN      ] testGeometry.point_227
+[       OK ] testGeometry.point_227 (0 ms)
+[ RUN      ] testGeometry.point_228
+[       OK ] testGeometry.point_228 (0 ms)
+[ RUN      ] testGeometry.point_229
+[       OK ] testGeometry.point_229 (0 ms)
+[ RUN      ] testGeometry.point_230
+[       OK ] testGeometry.point_230 (0 ms)
+[ RUN      ] testGeometry.point_231
+[       OK ] testGeometry.point_231 (0 ms)
+[ RUN      ] testGeometry.point_232
+[       OK ] testGeometry.point_232 (0 ms)
+[ RUN      ] testGeometry.point_233
+[       OK ] testGeometry.point_233 (0 ms)
+[ RUN      ] testGeometry.point_234
+[       OK ] testGeometry.point_234 (0 ms)
+[ RUN      ] testGeometry.point_235
+[       OK ] testGeometry.point_235 (0 ms)
+[ RUN      ] testGeometry.point_236
+[       OK ] testGeometry.point_236 (0 ms)
+[ RUN      ] testGeometry.point_237
+[       OK ] testGeometry.point_237 (0 ms)
+[ RUN      ] testGeometry.point_238
+[       OK ] testGeometry.point_238 (0 ms)
+[ RUN      ] testGeometry.point_239
+[       OK ] testGeometry.point_239 (0 ms)
+[ RUN      ] testGeometry.point_240
+[       OK ] testGeometry.point_240 (0 ms)
+[ RUN      ] testGeometry.point_241
+[       OK ] testGeometry.point_241 (0 ms)
+[ RUN      ] testGeometry.point_242
+[       OK ] testGeometry.point_242 (0 ms)
+[ RUN      ] testGeometry.point_243
+[       OK ] testGeometry.point_243 (0 ms)
+[ RUN      ] testGeometry.point_244
+[       OK ] testGeometry.point_244 (0 ms)
+[ RUN      ] testGeometry.point_245
+[       OK ] testGeometry.point_245 (0 ms)
+[ RUN      ] testGeometry.point_246
+[       OK ] testGeometry.point_246 (0 ms)
+[ RUN      ] testGeometry.point_247
+[       OK ] testGeometry.point_247 (0 ms)
+[ RUN      ] testGeometry.point_248
+[       OK ] testGeometry.point_248 (0 ms)
+[ RUN      ] testGeometry.point_249
+[       OK ] testGeometry.point_249 (0 ms)
+[ RUN      ] testGeometry.point_250
+[       OK ] testGeometry.point_250 (0 ms)
+[ RUN      ] testGeometry.point_251
+[       OK ] testGeometry.point_251 (0 ms)
+[ RUN      ] testGeometry.point_252
+[       OK ] testGeometry.point_252 (0 ms)
+[ RUN      ] testGeometry.point_253
+[       OK ] testGeometry.point_253 (0 ms)
+[ RUN      ] testGeometry.point_254
+[       OK ] testGeometry.point_254 (0 ms)
+[ RUN      ] testGeometry.point_255
+[       OK ] testGeometry.point_255 (0 ms)
+[ RUN      ] testGeometry.point_256
+/home/michal/Desktop/pg_test/test/test_camera_model.cpp:16: Failure
+The difference between u and eu is 0.36526837083511055, which exceeds 0.1, where
+u evaluates to -712064.03510314773,
+eu evaluates to -712064.40037151857, and
+0.1 evaluates to 0.10000000000000001.
+[  FAILED  ] testGeometry.point_256 (0 ms)
+[ RUN      ] testGeometry.point_257
+[       OK ] testGeometry.point_257 (0 ms)
+[ RUN      ] testGeometry.point_258
+[       OK ] testGeometry.point_258 (0 ms)
+[ RUN      ] testGeometry.point_259
+[       OK ] testGeometry.point_259 (0 ms)
+[ RUN      ] testGeometry.point_260
+[       OK ] testGeometry.point_260 (0 ms)
+[ RUN      ] testGeometry.point_261
+[       OK ] testGeometry.point_261 (0 ms)
+[ RUN      ] testGeometry.point_262
+[       OK ] testGeometry.point_262 (0 ms)
+[ RUN      ] testGeometry.point_263
+[       OK ] testGeometry.point_263 (0 ms)
+[ RUN      ] testGeometry.point_264
+/home/michal/Desktop/pg_test/test/test_camera_model.cpp:16: Failure
+The difference between u and eu is 0.26482916506938636, which exceeds 0.1, where
+u evaluates to -533186.07403356151,
+eu evaluates to -533186.33886272658, and
+0.1 evaluates to 0.10000000000000001.
+[  FAILED  ] testGeometry.point_264 (0 ms)
+[ RUN      ] testGeometry.point_265
+[       OK ] testGeometry.point_265 (0 ms)
+[ RUN      ] testGeometry.point_266
+[       OK ] testGeometry.point_266 (0 ms)
+[ RUN      ] testGeometry.point_267
+[       OK ] testGeometry.point_267 (0 ms)
+[ RUN      ] testGeometry.point_268
+[       OK ] testGeometry.point_268 (0 ms)
+[ RUN      ] testGeometry.point_269
+[       OK ] testGeometry.point_269 (0 ms)
+[ RUN      ] testGeometry.point_270
+[       OK ] testGeometry.point_270 (0 ms)
+[ RUN      ] testGeometry.point_271
+[       OK ] testGeometry.point_271 (0 ms)
+[ RUN      ] testGeometry.point_272
+/home/michal/Desktop/pg_test/test/test_camera_model.cpp:16: Failure
+The difference between u and eu is 0.17029581277165562, which exceeds 0.1, where
+u evaluates to -354308.10637183703,
+eu evaluates to -354308.2766676498, and
+0.1 evaluates to 0.10000000000000001.
+[  FAILED  ] testGeometry.point_272 (0 ms)
+[ RUN      ] testGeometry.point_273
+[       OK ] testGeometry.point_273 (0 ms)
+[ RUN      ] testGeometry.point_274
+[       OK ] testGeometry.point_274 (0 ms)
+[ RUN      ] testGeometry.point_275
+[       OK ] testGeometry.point_275 (0 ms)
+[ RUN      ] testGeometry.point_276
+[       OK ] testGeometry.point_276 (0 ms)
+[ RUN      ] testGeometry.point_277
+[       OK ] testGeometry.point_277 (0 ms)
+[ RUN      ] testGeometry.point_278
+[       OK ] testGeometry.point_278 (0 ms)
+[ RUN      ] testGeometry.point_279
+[       OK ] testGeometry.point_279 (0 ms)
+[ RUN      ] testGeometry.point_280
+[       OK ] testGeometry.point_280 (0 ms)
+[ RUN      ] testGeometry.point_281
+[       OK ] testGeometry.point_281 (0 ms)
+[ RUN      ] testGeometry.point_282
+[       OK ] testGeometry.point_282 (0 ms)
+[ RUN      ] testGeometry.point_283
+[       OK ] testGeometry.point_283 (0 ms)
+[ RUN      ] testGeometry.point_284
+[       OK ] testGeometry.point_284 (0 ms)
+[ RUN      ] testGeometry.point_285
+[       OK ] testGeometry.point_285 (0 ms)
+[ RUN      ] testGeometry.point_286
+[       OK ] testGeometry.point_286 (0 ms)
+[ RUN      ] testGeometry.point_287
+[       OK ] testGeometry.point_287 (0 ms)
+[ RUN      ] testGeometry.point_288
+[       OK ] testGeometry.point_288 (0 ms)
+[ RUN      ] testGeometry.point_289
+[       OK ] testGeometry.point_289 (0 ms)
+[ RUN      ] testGeometry.point_290
+/home/michal/Desktop/pg_test/test/test_camera_model.cpp:17: Failure
+The difference between v and ev is 0.81275995401665568, which exceeds 0.1, where
+v evaluates to 3519696.4353018641,
+ev evaluates to 3519695.62254191, and
+0.1 evaluates to 0.10000000000000001.
+[  FAILED  ] testGeometry.point_290 (0 ms)
+[ RUN      ] testGeometry.point_291
+[       OK ] testGeometry.point_291 (0 ms)
+[ RUN      ] testGeometry.point_292
+[       OK ] testGeometry.point_292 (0 ms)
+[ RUN      ] testGeometry.point_293
+[       OK ] testGeometry.point_293 (0 ms)
+[ RUN      ] testGeometry.point_294
+[       OK ] testGeometry.point_294 (0 ms)
+[ RUN      ] testGeometry.point_295
+[       OK ] testGeometry.point_295 (0 ms)
+[ RUN      ] testGeometry.point_296
+[       OK ] testGeometry.point_296 (0 ms)
+[ RUN      ] testGeometry.point_297
+[       OK ] testGeometry.point_297 (0 ms)
+[ RUN      ] testGeometry.point_298
+[       OK ] testGeometry.point_298 (0 ms)
+[ RUN      ] testGeometry.point_299
+[       OK ] testGeometry.point_299 (0 ms)
+[ RUN      ] testGeometry.point_300
+[       OK ] testGeometry.point_300 (0 ms)
+[ RUN      ] testGeometry.point_301
+[       OK ] testGeometry.point_301 (0 ms)
+[ RUN      ] testGeometry.point_302
+[       OK ] testGeometry.point_302 (0 ms)
+[ RUN      ] testGeometry.point_303
+[       OK ] testGeometry.point_303 (0 ms)
+[ RUN      ] testGeometry.point_304
+/home/michal/Desktop/pg_test/test/test_camera_model.cpp:16: Failure
+The difference between u and eu is 0.14877904852619395, which exceeds 0.1, where
+u evaluates to 361203.8301964514,
+eu evaluates to 361203.97897549992, and
+0.1 evaluates to 0.10000000000000001.
+[  FAILED  ] testGeometry.point_304 (0 ms)
+[ RUN      ] testGeometry.point_305
+[       OK ] testGeometry.point_305 (0 ms)
+[ RUN      ] testGeometry.point_306
+[       OK ] testGeometry.point_306 (0 ms)
+[ RUN      ] testGeometry.point_307
+[       OK ] testGeometry.point_307 (0 ms)
+[ RUN      ] testGeometry.point_308
+[       OK ] testGeometry.point_308 (0 ms)
+[ RUN      ] testGeometry.point_309
+[       OK ] testGeometry.point_309 (0 ms)
+[ RUN      ] testGeometry.point_310
+[       OK ] testGeometry.point_310 (0 ms)
+[ RUN      ] testGeometry.point_311
+[       OK ] testGeometry.point_311 (0 ms)
+[ RUN      ] testGeometry.point_312
+/home/michal/Desktop/pg_test/test/test_camera_model.cpp:16: Failure
+The difference between u and eu is 0.21378312550950795, which exceeds 0.1, where
+u evaluates to 540081.83081887243,
+eu evaluates to 540082.04460199794, and
+0.1 evaluates to 0.10000000000000001.
+[  FAILED  ] testGeometry.point_312 (0 ms)
+[ RUN      ] testGeometry.point_313
+[       OK ] testGeometry.point_313 (0 ms)
+[ RUN      ] testGeometry.point_314
+[       OK ] testGeometry.point_314 (0 ms)
+[ RUN      ] testGeometry.point_315
+[       OK ] testGeometry.point_315 (0 ms)
+[ RUN      ] testGeometry.point_316
+[       OK ] testGeometry.point_316 (0 ms)
+[ RUN      ] testGeometry.point_317
+[       OK ] testGeometry.point_317 (0 ms)
+[ RUN      ] testGeometry.point_318
+[       OK ] testGeometry.point_318 (0 ms)
+[ RUN      ] testGeometry.point_319
+[       OK ] testGeometry.point_319 (0 ms)
+[ RUN      ] testGeometry.point_320
+[       OK ] testGeometry.point_320 (0 ms)
+[ RUN      ] testGeometry.point_321
+[       OK ] testGeometry.point_321 (0 ms)
+[ RUN      ] testGeometry.point_322
+[       OK ] testGeometry.point_322 (0 ms)
+[ RUN      ] testGeometry.point_323
+[       OK ] testGeometry.point_323 (0 ms)
+[ RUN      ] testGeometry.point_324
+[       OK ] testGeometry.point_324 (0 ms)
+[ RUN      ] testGeometry.point_325
+[       OK ] testGeometry.point_325 (0 ms)
+[ RUN      ] testGeometry.point_326
+[       OK ] testGeometry.point_326 (0 ms)
+[ RUN      ] testGeometry.point_327
+[       OK ] testGeometry.point_327 (0 ms)
+[ RUN      ] testGeometry.point_328
+[       OK ] testGeometry.point_328 (0 ms)
+[ RUN      ] testGeometry.point_329
+[       OK ] testGeometry.point_329 (0 ms)
+[ RUN      ] testGeometry.point_330
+[       OK ] testGeometry.point_330 (0 ms)
+[ RUN      ] testGeometry.point_331
+[       OK ] testGeometry.point_331 (0 ms)
+[ RUN      ] testGeometry.point_332
+[       OK ] testGeometry.point_332 (0 ms)
+[ RUN      ] testGeometry.point_333
+[       OK ] testGeometry.point_333 (0 ms)
+[ RUN      ] testGeometry.point_334
+[       OK ] testGeometry.point_334 (0 ms)
+[ RUN      ] testGeometry.point_335
+[       OK ] testGeometry.point_335 (0 ms)
+[ RUN      ] testGeometry.point_336
+[       OK ] testGeometry.point_336 (0 ms)
+[ RUN      ] testGeometry.point_337
+[       OK ] testGeometry.point_337 (0 ms)
+[ RUN      ] testGeometry.point_338
+[       OK ] testGeometry.point_338 (0 ms)
+[ RUN      ] testGeometry.point_339
+[       OK ] testGeometry.point_339 (0 ms)
+[ RUN      ] testGeometry.point_340
+[       OK ] testGeometry.point_340 (0 ms)
+[ RUN      ] testGeometry.point_341
+[       OK ] testGeometry.point_341 (0 ms)
+[ RUN      ] testGeometry.point_342
+[       OK ] testGeometry.point_342 (0 ms)
+[ RUN      ] testGeometry.point_343
+[       OK ] testGeometry.point_343 (0 ms)
+[ RUN      ] testGeometry.point_344
+[       OK ] testGeometry.point_344 (0 ms)
+[ RUN      ] testGeometry.point_345
+[       OK ] testGeometry.point_345 (0 ms)
+[ RUN      ] testGeometry.point_346
+[       OK ] testGeometry.point_346 (0 ms)
+[ RUN      ] testGeometry.point_347
+[       OK ] testGeometry.point_347 (0 ms)
+[ RUN      ] testGeometry.point_348
+[       OK ] testGeometry.point_348 (0 ms)
+[ RUN      ] testGeometry.point_349
+[       OK ] testGeometry.point_349 (0 ms)
+[ RUN      ] testGeometry.point_350
+[       OK ] testGeometry.point_350 (0 ms)
+[ RUN      ] testGeometry.point_351
+[       OK ] testGeometry.point_351 (0 ms)
+[ RUN      ] testGeometry.point_352
+[       OK ] testGeometry.point_352 (0 ms)
+[ RUN      ] testGeometry.point_353
+[       OK ] testGeometry.point_353 (0 ms)
+[ RUN      ] testGeometry.point_354
+[       OK ] testGeometry.point_354 (0 ms)
+[ RUN      ] testGeometry.point_355
+[       OK ] testGeometry.point_355 (0 ms)
+[ RUN      ] testGeometry.point_356
+[       OK ] testGeometry.point_356 (0 ms)
+[ RUN      ] testGeometry.point_357
+[       OK ] testGeometry.point_357 (0 ms)
+[ RUN      ] testGeometry.point_358
+[       OK ] testGeometry.point_358 (0 ms)
+[ RUN      ] testGeometry.point_359
+[       OK ] testGeometry.point_359 (0 ms)
+[ RUN      ] testGeometry.point_360
+[       OK ] testGeometry.point_360 (0 ms)
+[ RUN      ] testGeometry.point_361
+[       OK ] testGeometry.point_361 (0 ms)
+[ RUN      ] testGeometry.point_362
+[       OK ] testGeometry.point_362 (0 ms)
+[ RUN      ] testGeometry.point_363
+[       OK ] testGeometry.point_363 (0 ms)
+[ RUN      ] testGeometry.point_364
+[       OK ] testGeometry.point_364 (0 ms)
+[ RUN      ] testGeometry.point_365
+[       OK ] testGeometry.point_365 (0 ms)
+[ RUN      ] testGeometry.point_366
+[       OK ] testGeometry.point_366 (0 ms)
+[ RUN      ] testGeometry.point_367
+[       OK ] testGeometry.point_367 (0 ms)
+[ RUN      ] testGeometry.point_368
+[       OK ] testGeometry.point_368 (0 ms)
+[ RUN      ] testGeometry.point_369
+[       OK ] testGeometry.point_369 (0 ms)
+[ RUN      ] testGeometry.point_370
+[       OK ] testGeometry.point_370 (0 ms)
+[ RUN      ] testGeometry.point_371
+[       OK ] testGeometry.point_371 (0 ms)
+[ RUN      ] testGeometry.point_372
+[       OK ] testGeometry.point_372 (0 ms)
+[ RUN      ] testGeometry.point_373
+[       OK ] testGeometry.point_373 (0 ms)
+[ RUN      ] testGeometry.point_374
+[       OK ] testGeometry.point_374 (0 ms)
+[ RUN      ] testGeometry.point_375
+[       OK ] testGeometry.point_375 (0 ms)
+[ RUN      ] testGeometry.point_376
+[       OK ] testGeometry.point_376 (0 ms)
+[ RUN      ] testGeometry.point_377
+[       OK ] testGeometry.point_377 (0 ms)
+[ RUN      ] testGeometry.point_378
+[       OK ] testGeometry.point_378 (0 ms)
+[ RUN      ] testGeometry.point_379
+[       OK ] testGeometry.point_379 (0 ms)
+[ RUN      ] testGeometry.point_380
+[       OK ] testGeometry.point_380 (0 ms)
+[ RUN      ] testGeometry.point_381
+[       OK ] testGeometry.point_381 (0 ms)
+[ RUN      ] testGeometry.point_382
+[       OK ] testGeometry.point_382 (0 ms)
+[ RUN      ] testGeometry.point_383
+[       OK ] testGeometry.point_383 (0 ms)
+[ RUN      ] testGeometry.point_384
+[       OK ] testGeometry.point_384 (0 ms)
+[ RUN      ] testGeometry.point_385
+[       OK ] testGeometry.point_385 (0 ms)
+[ RUN      ] testGeometry.point_386
+[       OK ] testGeometry.point_386 (0 ms)
+[ RUN      ] testGeometry.point_387
+[       OK ] testGeometry.point_387 (0 ms)
+[ RUN      ] testGeometry.point_388
+[       OK ] testGeometry.point_388 (0 ms)
+[ RUN      ] testGeometry.point_389
+[       OK ] testGeometry.point_389 (0 ms)
+[ RUN      ] testGeometry.point_390
+[       OK ] testGeometry.point_390 (0 ms)
+[ RUN      ] testGeometry.point_391
+[       OK ] testGeometry.point_391 (0 ms)
+[ RUN      ] testGeometry.point_392
+[       OK ] testGeometry.point_392 (0 ms)
+[ RUN      ] testGeometry.point_393
+[       OK ] testGeometry.point_393 (0 ms)
+[ RUN      ] testGeometry.point_394
+[       OK ] testGeometry.point_394 (0 ms)
+[ RUN      ] testGeometry.point_395
+[       OK ] testGeometry.point_395 (0 ms)
+[ RUN      ] testGeometry.point_396
+[       OK ] testGeometry.point_396 (0 ms)
+[ RUN      ] testGeometry.point_397
+[       OK ] testGeometry.point_397 (0 ms)
+[ RUN      ] testGeometry.point_398
+[       OK ] testGeometry.point_398 (0 ms)
+[ RUN      ] testGeometry.point_399
+[       OK ] testGeometry.point_399 (0 ms)
+[ RUN      ] testGeometry.point_400
+[       OK ] testGeometry.point_400 (0 ms)
+[ RUN      ] testGeometry.point_401
+[       OK ] testGeometry.point_401 (0 ms)
+[ RUN      ] testGeometry.point_402
+[       OK ] testGeometry.point_402 (0 ms)
+[ RUN      ] testGeometry.point_403
+[       OK ] testGeometry.point_403 (0 ms)
+[ RUN      ] testGeometry.point_404
+[       OK ] testGeometry.point_404 (0 ms)
+[ RUN      ] testGeometry.point_405
+[       OK ] testGeometry.point_405 (0 ms)
+[ RUN      ] testGeometry.point_406
+[       OK ] testGeometry.point_406 (0 ms)
+[ RUN      ] testGeometry.point_407
+[       OK ] testGeometry.point_407 (0 ms)
+[ RUN      ] testGeometry.point_408
+[       OK ] testGeometry.point_408 (0 ms)
+[ RUN      ] testGeometry.point_409
+[       OK ] testGeometry.point_409 (0 ms)
+[ RUN      ] testGeometry.point_410
+[       OK ] testGeometry.point_410 (0 ms)
+[ RUN      ] testGeometry.point_411
+[       OK ] testGeometry.point_411 (0 ms)
+[ RUN      ] testGeometry.point_412
+[       OK ] testGeometry.point_412 (0 ms)
+[ RUN      ] testGeometry.point_413
+[       OK ] testGeometry.point_413 (0 ms)
+[ RUN      ] testGeometry.point_414
+[       OK ] testGeometry.point_414 (0 ms)
+[ RUN      ] testGeometry.point_415
+[       OK ] testGeometry.point_415 (0 ms)
+[ RUN      ] testGeometry.point_416
+[       OK ] testGeometry.point_416 (0 ms)
+[ RUN      ] testGeometry.point_417
+[       OK ] testGeometry.point_417 (0 ms)
+[ RUN      ] testGeometry.point_418
+[       OK ] testGeometry.point_418 (0 ms)
+[ RUN      ] testGeometry.point_419
+[       OK ] testGeometry.point_419 (0 ms)
+[ RUN      ] testGeometry.point_420
+[       OK ] testGeometry.point_420 (0 ms)
+[ RUN      ] testGeometry.point_421
+[       OK ] testGeometry.point_421 (0 ms)
+[ RUN      ] testGeometry.point_422
+[       OK ] testGeometry.point_422 (0 ms)
+[ RUN      ] testGeometry.point_423
+[       OK ] testGeometry.point_423 (0 ms)
+[ RUN      ] testGeometry.point_424
+[       OK ] testGeometry.point_424 (0 ms)
+[ RUN      ] testGeometry.point_425
+[       OK ] testGeometry.point_425 (0 ms)
+[ RUN      ] testGeometry.point_426
+[       OK ] testGeometry.point_426 (0 ms)
+[ RUN      ] testGeometry.point_427
+[       OK ] testGeometry.point_427 (0 ms)
+[ RUN      ] testGeometry.point_428
+[       OK ] testGeometry.point_428 (0 ms)
+[ RUN      ] testGeometry.point_429
+[       OK ] testGeometry.point_429 (0 ms)
+[ RUN      ] testGeometry.point_430
+[       OK ] testGeometry.point_430 (0 ms)
+[ RUN      ] testGeometry.point_431
+[       OK ] testGeometry.point_431 (0 ms)
+[ RUN      ] testGeometry.point_432
+[       OK ] testGeometry.point_432 (0 ms)
+[ RUN      ] testGeometry.point_433
+[       OK ] testGeometry.point_433 (0 ms)
+[ RUN      ] testGeometry.point_434
+[       OK ] testGeometry.point_434 (0 ms)
+[ RUN      ] testGeometry.point_435
+[       OK ] testGeometry.point_435 (0 ms)
+[ RUN      ] testGeometry.point_436
+[       OK ] testGeometry.point_436 (0 ms)
+[ RUN      ] testGeometry.point_437
+[       OK ] testGeometry.point_437 (0 ms)
+[ RUN      ] testGeometry.point_438
+[       OK ] testGeometry.point_438 (0 ms)
+[ RUN      ] testGeometry.point_439
+[       OK ] testGeometry.point_439 (0 ms)
+[ RUN      ] testGeometry.point_440
+[       OK ] testGeometry.point_440 (0 ms)
+[ RUN      ] testGeometry.point_441
+[       OK ] testGeometry.point_441 (0 ms)
+[ RUN      ] testGeometry.point_442
+[       OK ] testGeometry.point_442 (0 ms)
+[ RUN      ] testGeometry.point_443
+[       OK ] testGeometry.point_443 (0 ms)
+[ RUN      ] testGeometry.point_444
+[       OK ] testGeometry.point_444 (0 ms)
+[ RUN      ] testGeometry.point_445
+[       OK ] testGeometry.point_445 (0 ms)
+[ RUN      ] testGeometry.point_446
+[       OK ] testGeometry.point_446 (0 ms)
+[ RUN      ] testGeometry.point_447
+[       OK ] testGeometry.point_447 (0 ms)
+[ RUN      ] testGeometry.point_448
+[       OK ] testGeometry.point_448 (0 ms)
+[ RUN      ] testGeometry.point_449
+[       OK ] testGeometry.point_449 (0 ms)
+[ RUN      ] testGeometry.point_450
+[       OK ] testGeometry.point_450 (0 ms)
+[ RUN      ] testGeometry.point_451
+[       OK ] testGeometry.point_451 (0 ms)
+[ RUN      ] testGeometry.point_452
+[       OK ] testGeometry.point_452 (0 ms)
+[ RUN      ] testGeometry.point_453
+[       OK ] testGeometry.point_453 (0 ms)
+[ RUN      ] testGeometry.point_454
+[       OK ] testGeometry.point_454 (0 ms)
+[ RUN      ] testGeometry.point_455
+[       OK ] testGeometry.point_455 (0 ms)
+[ RUN      ] testGeometry.point_456
+[       OK ] testGeometry.point_456 (0 ms)
+[ RUN      ] testGeometry.point_457
+[       OK ] testGeometry.point_457 (0 ms)
+[ RUN      ] testGeometry.point_458
+[       OK ] testGeometry.point_458 (0 ms)
+[ RUN      ] testGeometry.point_459
+[       OK ] testGeometry.point_459 (0 ms)
+[ RUN      ] testGeometry.point_460
+[       OK ] testGeometry.point_460 (0 ms)
+[ RUN      ] testGeometry.point_461
+[       OK ] testGeometry.point_461 (0 ms)
+[ RUN      ] testGeometry.point_462
+[       OK ] testGeometry.point_462 (0 ms)
+[ RUN      ] testGeometry.point_463
+[       OK ] testGeometry.point_463 (0 ms)
+[ RUN      ] testGeometry.point_464
+[       OK ] testGeometry.point_464 (0 ms)
+[ RUN      ] testGeometry.point_465
+[       OK ] testGeometry.point_465 (0 ms)
+[ RUN      ] testGeometry.point_466
+[       OK ] testGeometry.point_466 (0 ms)
+[ RUN      ] testGeometry.point_467
+[       OK ] testGeometry.point_467 (0 ms)
+[ RUN      ] testGeometry.point_468
+[       OK ] testGeometry.point_468 (0 ms)
+[ RUN      ] testGeometry.point_469
+[       OK ] testGeometry.point_469 (0 ms)
+[ RUN      ] testGeometry.point_470
+[       OK ] testGeometry.point_470 (0 ms)
+[ RUN      ] testGeometry.point_471
+[       OK ] testGeometry.point_471 (0 ms)
+[ RUN      ] testGeometry.point_472
+[       OK ] testGeometry.point_472 (0 ms)
+[ RUN      ] testGeometry.point_473
+[       OK ] testGeometry.point_473 (0 ms)
+[ RUN      ] testGeometry.point_474
+[       OK ] testGeometry.point_474 (0 ms)
+[ RUN      ] testGeometry.point_475
+[       OK ] testGeometry.point_475 (0 ms)
+[ RUN      ] testGeometry.point_476
+[       OK ] testGeometry.point_476 (0 ms)
+[ RUN      ] testGeometry.point_477
+[       OK ] testGeometry.point_477 (0 ms)
+[ RUN      ] testGeometry.point_478
+[       OK ] testGeometry.point_478 (0 ms)
+[ RUN      ] testGeometry.point_479
+[       OK ] testGeometry.point_479 (0 ms)
+[ RUN      ] testGeometry.point_480
+[       OK ] testGeometry.point_480 (0 ms)
+[ RUN      ] testGeometry.point_481
+[       OK ] testGeometry.point_481 (0 ms)
+[ RUN      ] testGeometry.point_482
+[       OK ] testGeometry.point_482 (0 ms)
+[ RUN      ] testGeometry.point_483
+[       OK ] testGeometry.point_483 (0 ms)
+[ RUN      ] testGeometry.point_484
+[       OK ] testGeometry.point_484 (0 ms)
+[ RUN      ] testGeometry.point_485
+[       OK ] testGeometry.point_485 (0 ms)
+[ RUN      ] testGeometry.point_486
+[       OK ] testGeometry.point_486 (0 ms)
+[ RUN      ] testGeometry.point_487
+[       OK ] testGeometry.point_487 (0 ms)
+[ RUN      ] testGeometry.point_488
+[       OK ] testGeometry.point_488 (0 ms)
+[ RUN      ] testGeometry.point_489
+[       OK ] testGeometry.point_489 (0 ms)
+[ RUN      ] testGeometry.point_490
+[       OK ] testGeometry.point_490 (0 ms)
+[ RUN      ] testGeometry.point_491
+[       OK ] testGeometry.point_491 (0 ms)
+[ RUN      ] testGeometry.point_492
+[       OK ] testGeometry.point_492 (0 ms)
+[ RUN      ] testGeometry.point_493
+[       OK ] testGeometry.point_493 (0 ms)
+[ RUN      ] testGeometry.point_494
+[       OK ] testGeometry.point_494 (0 ms)
+[ RUN      ] testGeometry.point_495
+[       OK ] testGeometry.point_495 (0 ms)
+[ RUN      ] testGeometry.point_496
+[       OK ] testGeometry.point_496 (0 ms)
+[ RUN      ] testGeometry.point_497
+[       OK ] testGeometry.point_497 (0 ms)
+[ RUN      ] testGeometry.point_498
+[       OK ] testGeometry.point_498 (0 ms)
+[ RUN      ] testGeometry.point_499
+[       OK ] testGeometry.point_499 (0 ms)
+[ RUN      ] testGeometry.point_500
+[       OK ] testGeometry.point_500 (0 ms)
+[ RUN      ] testGeometry.point_501
+[       OK ] testGeometry.point_501 (0 ms)
+[ RUN      ] testGeometry.point_502
+[       OK ] testGeometry.point_502 (0 ms)
+[ RUN      ] testGeometry.point_503
+[       OK ] testGeometry.point_503 (0 ms)
+[ RUN      ] testGeometry.point_504
+[       OK ] testGeometry.point_504 (0 ms)
+[ RUN      ] testGeometry.point_505
+[       OK ] testGeometry.point_505 (0 ms)
+[ RUN      ] testGeometry.point_506
+[       OK ] testGeometry.point_506 (0 ms)
+[ RUN      ] testGeometry.point_507
+[       OK ] testGeometry.point_507 (0 ms)
+[ RUN      ] testGeometry.point_508
+[       OK ] testGeometry.point_508 (0 ms)
+[ RUN      ] testGeometry.point_509
+[       OK ] testGeometry.point_509 (0 ms)
+[ RUN      ] testGeometry.point_510
+[       OK ] testGeometry.point_510 (0 ms)
+[ RUN      ] testGeometry.point_511
+[       OK ] testGeometry.point_511 (0 ms)
+[----------] 512 tests from testGeometry (3 ms total)
+
+[----------] Global test environment tear-down
+[==========] 512 tests from 1 test case ran. (3 ms total)
+[  PASSED  ] 503 tests.
+[  FAILED  ] 9 tests, listed below:
+[  FAILED  ] testGeometry.point_91
+[  FAILED  ] testGeometry.point_92
+[  FAILED  ] testGeometry.point_93
+[  FAILED  ] testGeometry.point_256
+[  FAILED  ] testGeometry.point_264
+[  FAILED  ] testGeometry.point_272
+[  FAILED  ] testGeometry.point_290
+[  FAILED  ] testGeometry.point_304
+[  FAILED  ] testGeometry.point_312
+
+ 9 FAILED TESTS

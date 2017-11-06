@@ -46,6 +46,9 @@
    } \
    \
 
+
+
+
 int main( int /* argc */, char* /* argv[] */ )
 {
 
@@ -73,7 +76,81 @@ int main( int /* argc */, char* /* argv[] */ )
     _HANDLE_ERROR;
 
 
+    {
+		//get shutter
+		bool present;
+		unsigned int plMin,plMax,plDefault;
+		unsigned int plValueA,plValueB;
 
+		bool pbAuto, pbManual;
+		LadybugProperty  property = LADYBUG_GAIN;
+		error = ::ladybugGetPropertyRange(
+			 context,
+			 property,
+			&present,
+			&plMin, &plMax, &plDefault, &pbAuto, &pbManual);
+		_HANDLE_ERROR;
+		printf ("LADYBUG_SHUTTER\n");
+		printf ("	plMin     : %d \n ", plMin);
+		printf ("	plMax     : %d \n ", plMax);
+		printf ("	plDefault : %d \n ", plDefault);
+		printf ("	pbAuto    : %d \n ", pbAuto);
+		printf ("	pbManual  : %d \n ", pbManual);
+
+		error = ::ladybugGetProperty(
+					context,
+				    property,
+				    &plValueA,
+				    &plValueB,
+				    &pbAuto );
+				_HANDLE_ERROR;
+		printf ("	plValueA  : %d \n ", plValueA);
+		printf ("	plValueB  : %d \n ", plValueB);
+		printf ("	pbAuto    : %d \n ", pbAuto);
+
+    }
+
+    error = ::ladybugSetProperty(
+    		context,
+    		LADYBUG_GAIN,
+    		1000,
+    		0,
+    		false );
+    _HANDLE_ERROR;
+
+    {
+		//get shutter
+		bool present;
+		unsigned int plMin,plMax,plDefault;
+		unsigned int plValueA,plValueB;
+
+		bool pbAuto, pbManual;
+		LadybugProperty  property = LADYBUG_GAIN;
+		error = ::ladybugGetPropertyRange(
+			 context,
+			 property,
+			&present,
+			&plMin, &plMax, &plDefault, &pbAuto, &pbManual);
+		_HANDLE_ERROR;
+		printf ("LADYBUG_SHUTTER\n");
+		printf ("	plMin     : %d \n ", plMin);
+		printf ("	plMax     : %d \n ", plMax);
+		printf ("	plDefault : %d \n ", plDefault);
+		printf ("	pbAuto    : %d \n ", pbAuto);
+		printf ("	pbManual  : %d \n ", pbManual);
+
+		error = ::ladybugGetProperty(
+					context,
+				    property,
+				    &plValueA,
+				    &plValueB,
+				    &pbAuto );
+				_HANDLE_ERROR;
+		printf ("	plValueA  : %d \n ", plValueA);
+		printf ("	plValueB  : %d \n ", plValueB);
+		printf ("	pbAuto    : %d \n ", pbAuto);
+
+    }
 
     // Grab a single image.
     printf( "Grabbing image\n" );
