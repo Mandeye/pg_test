@@ -60,6 +60,9 @@ add_executable(lady_bug_8bit
 add_executable(lady_bug_8bit_rect
 	ladybug_8bitTest_rect.cpp
 )
+add_executable(lady_bug_camera_control
+	lady_bug_camera_control.cpp
+)
 add_executable(ladybugStitchFrom3DMesh
  ladybugStitchFrom3DMesh/ladybugStitchFrom3DMesh.cpp
  ladybugStitchFrom3DMesh/pgrpnmio.cpp
@@ -69,6 +72,9 @@ add_executable(ladybugStitchFrom3DMeshCamera
  ladybugStitchFrom3DMesh/pgrpnmio.cpp
 )
 
+add_executable(ladybugSaveRaw
+ ladybug_raw.cpp
+)
 
 target_link_libraries(lady_bug_16bit
    ${OpenCV_LIBS}
@@ -82,19 +88,36 @@ target_link_libraries(lady_bug_8bit
    ladybug
    xerces-c
 )
+target_link_libraries(lady_bug_camera_control
+   ${OpenCV_LIBS}
+   flycapture
+   ladybug
+   xerces-c
+)
 target_link_libraries(lady_bug_8bit_rect
    ${OpenCV_LIBS}
    flycapture
    ladybug
    xerces-c
 )
+
 target_link_libraries(ladybugStitchFrom3DMesh 
     ${OpenCV_LIBS} 
     ${OPENGL_LIBRARIES} 
     ${GLUT_LIBRARY}
 )
 
+
 target_link_libraries(ladybugStitchFrom3DMeshCamera 
+    ${OpenCV_LIBS} 
+    ${OPENGL_LIBRARIES} 
+    ${GLUT_LIBRARY}
+    flycapture
+    ladybug
+    xerces-c
+)
+
+target_link_libraries(ladybugSaveRaw
     ${OpenCV_LIBS} 
     ${OPENGL_LIBRARIES} 
     ${GLUT_LIBRARY}

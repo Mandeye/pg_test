@@ -46,8 +46,11 @@
    } \
    \
 
+
+
+
 int main( int /* argc */, char* /* argv[] */ )
-{    
+{
 
     // Initialize context.
     LadybugContext context;
@@ -74,7 +77,6 @@ int main( int /* argc */, char* /* argv[] */ )
 
 
 
-
     // Grab a single image.
     printf( "Grabbing image\n" );
     error = LADYBUG_FAILED;
@@ -90,26 +92,34 @@ int main( int /* argc */, char* /* argv[] */ )
 
     printf("Saving images...\n");
 
+    cv::Size size(currentImage.uiFullCols, 5*currentImage.uiFullRows);
+    cv::Mat rawImage(size, CV_16UC1, currentImage.pData);
+    cv::imwrite("out.png", rawImage);
 
+	FILE* f = fopen ("out.raw", "wb");
+	fwrite (rawImage.data,rawImage.depth(), rawImage.rows * rawImage.cols , f);
+	fclose(f);
 
     for (unsigned int uiCamera = 0; uiCamera < LADYBUG_NUM_CAMERAS; uiCamera++)
     {
 		std::ostringstream out;
 
-		out << "image" << uiCamera << ".png";
+		out << "image" << uiCamera<<".png";
 
 		cv::Size size(currentImage.uiFullCols, currentImage.uiFullRows);
 		cv::Mat rawImage(size, CV_16UC1, currentImage.pData + (uiCamera * size.width*size.height*2));
-		cv::Mat image(size, CV_16UC3);
-		cv::Mat image2;
+		cv::Mat imageDebayered;
+		cv::cvtColor(rawImage, imageDebayered, cv::COLOR_BayerBG2BGR_EA);
+		LadybugImageBorder border = currentImage.imageBorder;
 
-		cv::cvtColor(rawImage, image, cv::COLOR_BayerBG2RGB);
-		//cv::resize(image, image2 ,cv::Size(0,0), 0.3,0.3);
-		//cv::imshow("aaa", image2);
-		//cv::waitKey(0);
+		cv::Mat imageCropped = imageDebayered(cv::Range(border.uiTopRows, size.height-border.uiBottomRows), cv::Range(border.uiLeftCols, size.width-border.uiRightCols));
 
+		//cv::Mat imageCropped = rawImage;
+		std::cout << "imageCropped.depth() : " << imageCropped.depth() << "\n";
+		std::cout << "imageCropped.rows()  : " << imageCropped.rows << "\n";
+		std::cout << "imageCropped.cols()  : " << imageCropped.cols << "\n";
+		 cv::imwrite(out.str(), imageCropped);
 
-		cv::imwrite(out.str(), image);
     }
 
     // Destroy the context
