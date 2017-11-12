@@ -131,4 +131,5 @@ add_executable(test_${PROJECT_NAME} ${test_sources})
 target_link_libraries(test_${PROJECT_NAME} ${GTEST_LIBRARIES} pthread gtest
   ${Boost_LIBRARIES}
   ${PCL_LIBRARIES}
+  ${OpenCV_LIBS} 
 )

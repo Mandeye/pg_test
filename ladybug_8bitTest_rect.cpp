@@ -47,24 +47,30 @@
    } \
    \
 
+
+
+const int COLS_COUNT = 2448;
+const int ROWS_COUNT = 2048;
+
 typedef struct ladybug_hash_table
 {
 	float rRow;
 	float rCol;
 }ladybug_hash_table_t;
 
-ladybug_hash_table_t hashTableImage[6][2448*2048];
+// [camera][col][row]
+ladybug_hash_table_t hashTableImage[6][ROWS_COUNT][COLS_COUNT];
 std::string file_hashTableImage[6];
 
 
 
-bool loadHashTableCamera(ladybug_hash_table_t *_hashTableImage, std::string _filename)
+bool loadHashTableCamera(ladybug_hash_table_t _hashTableImage[][COLS_COUNT], std::string _filename)
 {
 	std::ifstream f;
 	f.open(_filename.c_str());
 	if(f.good())
 	{
-		int counter = 0;
+		//int counter = 0;
 		while(!f.eof())
 		{
 			std::string s;
@@ -75,10 +81,10 @@ bool loadHashTableCamera(ladybug_hash_table_t *_hashTableImage, std::string _fil
 			float rCol;
 			sscanf(s.c_str(),"%d %d %f %f", &dRow, &dCol, &rRow, &rCol);
 
-			_hashTableImage[counter].rRow = rRow;
-			_hashTableImage[counter].rCol = rCol;
+			_hashTableImage[dRow][dCol].rRow = rRow;
+			_hashTableImage[dRow][dCol].rCol = rCol;
 
-			counter++;
+			//counter++;
 		}
 		f.close();
 		return true;
@@ -89,49 +95,17 @@ inline bool _isBlack(cv::Vec3b b)
 {
 	return b[0]== 0 &&  b[1] == 0 && b[2] == 0;
 }
-void filter (cv::Mat &input, cv::Mat &output)
-{
-	output = input;
-	for (int i = 1; i+1 < output.rows;i++)
-	{
-		for (int j = 1; j+1 < output.cols;j++)
-		{
-			cv::Vec3b intensity0 = input.at<cv::Vec3b>(i, j);
-			cv::Vec3b intensity1 = input.at<cv::Vec3b>(i-1, j);
-			cv::Vec3b intensity2 = input.at<cv::Vec3b>(i+1, j);
-			cv::Vec3b intensity3 = input.at<cv::Vec3b>(i, j-1);
-			cv::Vec3b intensity4 = input.at<cv::Vec3b>(i, j+1);
 
-
-
-			if (_isBlack(intensity0))
-			{
-				intensity0 = intensity1;
-			}
-			if (_isBlack(intensity0))
-			{
-				intensity0 = intensity2;
-			}
-			if (_isBlack(intensity0))
-			{
-				intensity0 = intensity3;
-			}
-
-
-			output.at<cv::Vec3b>(i,j) = intensity0;
-		}
-	}
-}
 
 int main( int /* argc */, char* /* argv[] */ )
 {
 
-	file_hashTableImage[0] = "hashtable_rectified_CAM0.txt";
-	file_hashTableImage[1] = "hashtable_rectified_CAM1.txt";
-	file_hashTableImage[2] = "hashtable_rectified_CAM2.txt";
-	file_hashTableImage[3] = "hashtable_rectified_CAM3.txt";
-	file_hashTableImage[4] = "hashtable_rectified_CAM4.txt";
-	file_hashTableImage[5] = "hashtable_rectified_CAM5.txt";
+	file_hashTableImage[0] = "rectification0.txt";
+	file_hashTableImage[1] = "rectification1.txt";
+	file_hashTableImage[2] = "rectification2.txt";
+	file_hashTableImage[3] = "rectification3.txt";
+	file_hashTableImage[4] = "rectification4.txt";
+	file_hashTableImage[5] = "rectification5.txt";
 
 
 	for(int i = 0 ; i < 6 ; i++)
@@ -199,7 +173,7 @@ int main( int /* argc */, char* /* argv[] */ )
     {
 		std::ostringstream out;
 
-		out << "image" << uiCamera<<".ppm";
+		out << "image" << uiCamera<<".png";
 
 		cv::Size size(currentImage.uiFullCols, currentImage.uiFullRows);
 		cv::Mat rawImage(size, CV_8UC1, currentImage.pData + (uiCamera * size.width*size.height));
@@ -210,25 +184,34 @@ int main( int /* argc */, char* /* argv[] */ )
 		cv::Mat imageCropped = imageDebayered(cv::Range(border.uiTopRows, size.height-border.uiBottomRows), cv::Range(border.uiLeftCols, size.width-border.uiRightCols));
 		cv::transpose(imageCropped, imageCropped);
 
-		cv::Mat ImageRectified = cv::Mat::zeros(imageCropped.size(), imageCropped.type());
+		cv::Mat ImageRectified = cv::Mat::zeros(imageCropped.size(), CV_8UC4);
 
-		for(int col = 0 ; col < imageCropped.size().height; col++)
+		for(int col = 0 ; col < COLS_COUNT; col++)
 		{
-			for(int row = 0; row < imageCropped.size().width; row++)
+			for(int row = 0; row < ROWS_COUNT; row++)
 			{
-				cv::Vec3b intensity = imageCropped.at<cv::Vec3b>(col, row);
-				ladybug_hash_table_t ht = hashTableImage[uiCamera][row + col * 2048 ];
+				ladybug_hash_table_t ht = hashTableImage[uiCamera][row][col];
+				volatile double row_unrect = ht.rRow;
+				volatile double col_unrect = ht.rCol;
+				if (row_unrect >0  && row_unrect < ROWS_COUNT -1 && col_unrect> 0 && col_unrect < COLS_COUNT -1)
+				{
+					cv::Vec3b intensity = imageCropped.at<cv::Vec3b>(roundf(col_unrect), roundf(int(row_unrect)));
+					cv::Vec4b k;
+					k.val[0] =  intensity.val[0];
+					k.val[1] =  intensity.val[1];
+					k.val[2] =  intensity.val[2];
+					k.val[3] =  255;
 
-				ImageRectified.at<cv::Vec3b>(roundf(ht.rCol), roundf(imageCropped.size().width - int(ht.rRow) - 1)) = intensity;
-
+					ImageRectified.at<cv::Vec4b>(col, 2048-row) = k;
+				}
 
 			}
 		}
-		cv::Mat ImageRectifiedFilteredl;
-		filter(ImageRectified,ImageRectifiedFilteredl);
-		cv::rotate(ImageRectifiedFilteredl,ImageRectifiedFilteredl, cv::ROTATE_90_COUNTERCLOCKWISE);
+		//cv::Mat ImageRectifiedFilteredl;
+		//filter(ImageRectified,ImageRectifiedFilteredl);
+		cv::rotate(ImageRectified,ImageRectified, cv::ROTATE_90_COUNTERCLOCKWISE);
 		//cv::resize(ImageRectified,ImageRectified, cv::Size(ImageRectified.size().width/2,ImageRectified.size().height/2 ));
-		cv::imwrite(out.str(), ImageRectifiedFilteredl);
+		cv::imwrite(out.str(), ImageRectified);
     }
 
     // Destroy the context
